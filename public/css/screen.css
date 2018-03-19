@@ -1,0 +1,12 @@
+#imgPhone {
+    overflow: hidden;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+  text-align: center 
+}
