@@ -1,7 +1,8 @@
-var express = require('express');
-var app = express(); 
-var server = require('http').Server(app);
-var io = require('socket.io').listen(server);
+const express = require('express');
+const app = express(); 
+const server = require('http').Server(app);
+const io = require('socket.io').listen(server);
+const port = process.env.PORT || 80;
 
 //Static content
 app.use(express.static('public'));
@@ -46,7 +47,7 @@ io.sockets.on('connection', (socket) => {
 });
 
 //Setting server to listen
-server.listen('3001', (err) => {
+server.listen(port, (err) => {
   if(!err){
     console.log('Server is running...');
   }
